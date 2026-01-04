@@ -65,7 +65,7 @@ INNER JOIN fabricante f ON p.codigo_fabricante = f.codigo;
 -- 22. Llista tots els productes amb nom, preu i nom del fabricant (nombre del fabricante) ordenats alfabèticament.
 SELECT p.nombre AS nombre, p.precio AS precio, f.nombre AS `nombre del fabricante` FROM producto p
 INNER JOIN fabricante f ON p.codigo_fabricante = f.codigo
-ORDER BY p.nombre ASC;
+ORDER BY f.nombre ASC, p.nombre ASC;
 
 -- 23. Retorna una llista amb el codi del producte, nom del producte, codi del fabricant (codigo fabricante) i nom del fabricant (nombre fabricante), de tots els productes de la base de dades.
 SELECT p.codigo AS codigo, p.nombre AS nombre, p.codigo_fabricante AS `codigo fabricante`, f.nombre AS `nombre fabricante`
